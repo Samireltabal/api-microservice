@@ -29,4 +29,9 @@ class Country extends Model
         'emoji',
         'emojiU'
     ];
+
+    protected $casts = [
+        'timezones' => 'array',
+        'translations' => 'array'
+    ];
 }

@@ -30,6 +30,8 @@ Route::get('/auth/revoke/{token_id}', [AuthController::class, 'revokeToken']);
 
 Route::get('/protected/ping', [ProtectedController::class, 'ping']);
 Route::get('/get/{file}.json', [ProtectedController::class, 'fileJson']);
-Route::get('/get/{file}.xml', [ProtectedController::class, 'fileXml']);
+Route::get('/get/{file}.sql', [ProtectedController::class, 'fileSql']);
 Route::get('/countries/list', [ProtectedController::class, 'list_countries']);
+Route::get('/countries/{country}/list', [ProtectedController::class, 'list_states']);
+Route::get('/countries/{country}/{state}/list', [ProtectedController::class, 'list_cities']);
 
